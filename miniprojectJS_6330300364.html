@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <script src="topbar.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const topBar = createTopBar();
+            document.body.insertBefore(topBar, document.body.firstChild);
+        });
+    </script>
+    <div id="mycalendar">
+        <h1 id="current-month"></h1>
+        <button id="prev-month">Previous Month</button>
+        <button id="next-month">Next Month</button>
+        <table id="calendar-table">
+            <thead>
+                <tr>
+                    <th>Sun</th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                </tr>
+            </thead>
+            <tbody id="calendar-body"></tbody>
+        </table>
+        <div id="today-date"></div>
+        <div id="current-time"></div>
+        <button id="theme-toggle">Toggle Theme</button>
+        <script src="mycalendar.js"></script>
+    </div>
+</body>
+</html>
