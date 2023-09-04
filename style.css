@@ -2,8 +2,8 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #333; /* สีพื้นหลังสำหรับ dark mode */
-    color: white; /* สีข้อความ */
+    background-color: #333; 
+    color: white; 
     font-family: Arial, sans-serif;
 }
 
@@ -13,8 +13,8 @@ body {
 }
 
 .top-bar {
-    background-color: #666; /* สี top bar ใน dark mode */
-    color: white; /* สีข้อความใน top bar */
+    background-color: #666; 
+    color: white; 
     padding: 10px 0;
     display: flex;
     justify-content: space-between;
@@ -50,7 +50,7 @@ body {
 }
 
 .top-bar nav ul li a {
-    color: white; /* สีข้อความลิงค์ใน dark mode */
+    color: white; 
     text-decoration: none;
 }
 
@@ -76,10 +76,10 @@ body {
 
 
 #calendar-table {
-    width: 100%; /* ทำให้ตารางเต็มความกว้างของ #mycalendar */
-    margin: 0 auto; /* จัดตารางกลางทั้งแนวนอน */
+    width: 100%; 
+    margin: 0 auto; 
     border-collapse: collapse;
-    background-color: #444; /* สีพื้นหลังตารางใน dark mode */
+    background-color: #444; 
     border: 2px solid gray;
 }
 
@@ -92,8 +92,8 @@ body {
 }
 
 #calendar-table th {
-    background-color: #222; /* สีพื้นหลังหัวตารางใน dark mode */
-    color: white; /* สีข้อความในหัวตารางใน dark mode */
+    background-color: #222; 
+    color: white; 
 }
 
 #calendar-body td {
@@ -101,25 +101,25 @@ body {
 }
 
 #calendar-body td:hover {
-    background-color: #666; /* สีพื้นหลังเมื่อนำเมาส์มาที่เซลล์ปฏิทินใน dark mode */
+    background-color: #666; 
 }
 
 #prev-month,
 #next-month,
 #theme-toggle {
-    background-color: #444; /* สีพื้นหลังปุ่มใน dark mode */
-    color: white; /* สีข้อความในปุ่มใน dark mode */
+    background-color: #444; 
+    color: white; 
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin: 10px; /* เพิ่มการกำหนดระยะห่างของปุ่ม */
+    margin: 10px; 
 }
 
 #prev-month:hover,
 #next-month:hover,
 #theme-toggle:hover {
-    background-color: #333; /* สีพื้นหลังเมื่อนำเม้าส์ไปชี้ใน dark mode */
+    background-color: #333; 
     color: white;
 }
 
@@ -138,4 +138,28 @@ body {
     display: inline-block;
     margin-right: 10px;
 }
+
+
+
+/* Light Mode */
+.light-mode {
+    background-color: #5982da;
+    color: #385e93;
+}
+
+.light-mode #calendar-table {
+    background-color: #fdfdfd;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #2d3b5a;
+    color: rgb(255, 255, 255);
+}
+
+.dark-mode #calendar-table {
+    background-color: #444444;
+}
+
+
 

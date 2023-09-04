@@ -85,11 +85,25 @@ updateCurrentTime();
 setInterval(updateCurrentTime, 1000);
 
 // Theme Dark/Light
-const themeToggleBtn = document.getElementById('theme-toggle');
+let isDarkMode = true; 
 
 function toggleTheme() {
     const body = document.body;
-    body.classList.toggle('dark-theme');
+    const themeToggleBtn = document.getElementById('theme-toggle');
+
+    if (isDarkMode) {
+        body.classList.remove('dark-mode');
+        body.classList.add('light-mode');
+        themeToggleBtn.textContent = 'Toggle to Dark Mode';
+    } else {
+        body.classList.remove('light-mode');
+        body.classList.add('dark-mode');
+        themeToggleBtn.textContent = 'Toggle to Light Mode';
+    }
+
+    
+    isDarkMode = !isDarkMode;
 }
 
+const themeToggleBtn = document.getElementById('theme-toggle');
 themeToggleBtn.addEventListener('click', toggleTheme);
